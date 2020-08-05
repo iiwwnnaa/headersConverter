@@ -3,7 +3,7 @@ fileIn = "headers_in.txt"
 fileOut = "headers_out.txt"
 
 try:
-    with open(f"./{fileIn}","r") as f:
+    with open(f"./{fileIn}","r",encoding="UTF-8") as f:
         a = f.readlines()
 except FileNotFoundError:
         open(f"./{fileIn}","w")
