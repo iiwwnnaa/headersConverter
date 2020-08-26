@@ -3,14 +3,14 @@ fileIn = "headers_in.txt"
 fileOut = "headers_out.txt"
 
 try:
-    with open(f"./{fileIn}","r",encoding="UTF-8") as f:
+    with open(f"./{fileIn}","r", encoding="UTF-8") as f:
         a = f.readlines()
 except FileNotFoundError:
         open(f"./{fileIn}","w")
         print(f"{fileIn} has just generated! please retry")
         exit(0)
 
-with open(f"./{fileOut}","w+") as f:
+with open(f"./{fileOut}","w+", encoding="UTF-8") as f:
     p = re.compile("(.*?):(.*)")
     for index,val in enumerate(a):
         end=""
